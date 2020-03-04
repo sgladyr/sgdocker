@@ -1,0 +1,15 @@
+version: '2'
+services:
+  sgdocker:
+    build: .
+    image: sgdevops82/sgdocker
+    ports:
+     - "15080:80"
+    environment:
+     - myhero_app_server=http://localhost:15001
+     - myhero_spark_server=http://localhost:15003
+     - myhero_app_key=${MYHERO_APP_KEY}
+networks:
+  default:
+     external:
+       name: sgdocker_net
