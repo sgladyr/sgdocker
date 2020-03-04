@@ -1,3 +1,3 @@
 #!/bin/sh -e
 
-hostname sirko.localhost.net
+sudo hostname sirko.localhost.net
