@@ -5,7 +5,7 @@ EXPOSE 80
 
 # Zero tuning
 # RUN yum -y update && yum clean all
-RUN yum -y install htop mc ccze && yum clean all
+RUN yum -y install htop mc ccze iftop && yum clean all
 
 # Application and Environment Startup Script
 COPY ./env_setup.sh /root
